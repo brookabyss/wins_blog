@@ -1,0 +1,107 @@
+*{
+  /*border: 1px dashed red;*/
+}
+
+
+body{
+
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  /*background: radial-gradient(circle at 50% 50%, #eeeeee 0%, #333 100%);*/
+  /*background: radial-gradient(#e66465, #9198e5);*/
+  /*background: #eee;*/
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+.nav_bar{
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 2%;
+  /*background: white;*/
+
+}
+
+.hub-circle{
+  border: 1px solid red;
+  width: 8em;
+  height: 8em;
+  display: inline-block;
+  margin-left: 2em;
+  padding: 0;
+
+
+}
+
+.icon-img{
+  height: 8em;
+  width: 8em;
+  padding:0;
+
+}
+
+a{
+  height: 100%;
+  width:100%;
+  text-decoration: none;
+  margin:0;
+  padding:0;
+}
+
+.main-container{
+  width: 100%;
+  height: 100em;
+  margin-top: 2em;
+
+}
+
+.cont-1,.cont-2,.cont-3{
+  height: 25em;
+}
+
+.slogan-header{
+  font-size: 3em;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  margin-left: 10%;
+  padding: 0;
+}
+
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.snippets{
+  font-size:10px;
+}
+.profile-div{
+ height: 70%;
+}
+
+.profile-img{
+  height: 60%;
+  margin: 1%;
+  padding: 0;
+}
+
+.profile-story{
+  font-size: 14px;
+  text-align: center;
+
+}
+
+#person_image{
+  height: 100%;
+}

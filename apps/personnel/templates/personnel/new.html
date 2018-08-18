@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Hub-Show Personnel</title>
+  </head>
+  <body>
+    <form class="personnel-form" action="{% url 'personnel:create'%}" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" name="button">Submit</button>
+
+    </form>
+
+  </body>
+</html>

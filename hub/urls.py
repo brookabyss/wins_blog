@@ -19,6 +19,10 @@ from django.conf.urls import url,include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('apps.main.urls',namespace='main' , app_name='main')),
-    
+    url(r'^personnel/', include('apps.personnel.urls',namespace='personnel' , app_name='personnel')),
+    url(r'^news/', include('apps.news.urls',namespace='news' , app_name='news')),
+    url(r'^wins/', include('apps.wins.urls',namespace='wins' , app_name='wins')),
+
+
 
 ]

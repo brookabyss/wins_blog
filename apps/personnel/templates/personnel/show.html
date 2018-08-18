@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Hub-Personnel</title>
+  </head>
+  <body>
+    <p>Show Personnel</p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Fun Fact</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in personnel %}
+        <tr>
+          <td><img src="/personnel{{person.profile_image.url}}" alt="profile image" style="width:100px;height:100px;"></td>
+          <td>{{person.first_name}}</td>
+          <td>{{person.last_name}}</td>
+          <td>{{person.fun_fact}}</td>
+        </tr>
+
+        {% endfor %}
+
+      </tbody>
+
+    </table>
+
+
+  </body>
+</html>

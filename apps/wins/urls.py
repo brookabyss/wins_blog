@@ -3,8 +3,8 @@ from . import views
 from django.conf import settings
 
 
-app_name="main"
+app_name="wins"
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    
+    url(r'^all$', views.show, name='show'),
+
 ]
