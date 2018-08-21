@@ -13,14 +13,13 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" >
     <script src="{% static 'jquery/dist/jquery.min.js' %}" ></script>
     <script src="{% static 'bootstrap-4.0.0-dist/js/bootstrap.min.js' %}" ></script>
-    <script src="{% static 'js/handler.js' %}" ></script>
+
 
 
   </head>
   <body>
-
-
-   <div class="container">
+ <div class="container">
+   </div>
      <img class="col-10" id="landing_page_logo" src="{% static 'images/icons/landing_page_logo.png'%}" alt="">
      <div class="col-12 nav_bar">
        <div class="hub-circle kitchen col-2">
@@ -61,49 +60,39 @@
 <div class="main-container">
   <div class="row">
     <div class="cont-1 col-sm">
-      <a class="col-12 slogan-header" href="#">ACS Wins</a>
+      <a class="col-12 slogan-header" href="{% url 'wins:show' %}">ACS Wins</a>
       <div class="sub-div col-12">
         <ol>
-          <li><a href="#">May Day</a>
-        <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p></li>
-          <li>
-          <a href="#">Concert</a>
-          <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p>
-          </li>
-          <li>
-          <a href="#">Concert</a>
-          <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p>
-          </li>
+          {% for win in wins%}
+          <li><a href="/wins/detail/{{win.id}}">{{win.title}}</a>
+        <p class="snippets">{{win.description}}</p></li>
+          {% endfor %}
         </ol>
 
       </div>
     </div>
     <div class="cont-2 col-sm">
-      <a class="col-12 slogan-header" href="#">ACS News</a>
+      <a class="col-12 slogan-header" href="{% url 'news:show' %}">ACS News</a>
       <div class="sub-div col-12">
         <ol>
-          <li><a href="#">May Day</a>
-        <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p></li>
-          <li>
-          <a href="#">Concert</a>
-          <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p>
-          </li>
-          <li>
-          <a href="#">Concert</a>
-          <p class="snippets">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave...</p>
-          </li>
+          {% for n in news %}
+          <li><a href="/news/detail/{{n.id}}">{{n.title}}</a>
+        <p class="snippets">{{n.description}}</p></li>
+
+          {% endfor %}
+
         </ol>
 
       </div>
     </div>
     <div class="cont-3 col-sm">
-      <a class="col-12 slogan-header" href="#">People</a>
+      <a class="col-12 slogan-header" href="{% url 'personnel:show' %}">ACS Family</a>
       <div class="profile-div col-10">
         <div class="profile-img col-10">
           <img id="person_image" class="col-12" src="{% static 'images/profiles/man_2.jpg'%}" alt="profile_img">
 
         </div>
-        <p align="center" id="profile-story">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave</p>
+        <p align="center" id="fun-fact">Lorem ipsum dolor amet godard post-ironic jianbing chillwave, franzen offal 3 wolf moon meggings jean shorts edison bulb kale chips DIY snackwave</p>
 
       </div>
     </div>
@@ -111,6 +100,14 @@
 </div>
 
    </div>
+
+
+
+   <script type="text/javascript">
+   var personnel = '{{personnel |safe}}';
+   </script>
+    <script src="{% static 'js/handler.js' %}" ></script>
+    <script src="{% static 'js/carousel.js' %}" ></script>
 
   </body>
 </html>

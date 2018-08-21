@@ -19,7 +19,7 @@ def create(request):
         form = PersonnelForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return render(request,'personnel/show.html')
+            return redirect(reverse('personnel:show'))
         else:
             form = PersonnelForm()
     return render(request,'personnel/new.html',{'form':form})
@@ -29,3 +29,9 @@ def show(request):
         "personnel": Personnel.objects.all()
     }
     return render(request,'personnel/show.html',context)
+
+def view (request,user_id):
+    context = {
+        "person": Personnel.objects.filter(user_id)[0]
+    }
+    return render(request,'personnel/display.html')

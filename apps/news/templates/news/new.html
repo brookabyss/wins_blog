@@ -1,0 +1,15 @@
+{% extends 'news/base.html'%}
+{% block body %}
+
+    <h1>Publish News</h1>
+    <form class="personnel-form" action="{% url 'news:create'%}" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-danger" type="submit" name="button">Submit</button>
+
+    </form>
+
+  </body>
+</html>
+
+{% endblock %}

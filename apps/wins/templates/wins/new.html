@@ -1,0 +1,15 @@
+{% extends 'wins/base.html'%}
+{% block body %}
+
+    <h1>Announce Win</h1>
+    <form class="personnel-form" action="{% url 'wins:create'%}" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-danger" type="submit" name="button">Submit</button>
+
+    </form>
+
+  </body>
+</html>
+
+{% endblock %}

@@ -10,10 +10,12 @@ from django.views.static import serve
 
 app_name="personnel"
 urlpatterns = [
-    url(r'^$', views.new, name='new'),
+    url(r'^$', views.show, name='show'),
     url(r'^new$', views.new, name='new'),
     url(r'^create$', views.create, name='create'),
     url(r'^show$', views.show, name='show'),
+    url(r'^show/(?P<user_id>\d+)$', views.view, name='view'),
+
 
 
 ]

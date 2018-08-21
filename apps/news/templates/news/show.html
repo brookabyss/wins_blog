@@ -1,0 +1,27 @@
+{% extends 'news/base.html'%}
+{% block body %}
+    <h1>ACS News</h1>
+    <table class="table">
+      <thead>
+
+          <th scope="column">Title</th>
+          <th scope="column">Article</th>
+          <th scope="column">Published Date</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for n in news %}
+        <tr>
+          <td><a href="/news/detail/{{n.id}}">{{n.title}}</a></td>
+          <td>{{n.description}}</td>
+          <td>{{n.created_at}}</td>
+        </tr>
+
+        {% endfor %}
+
+      </tbody>
+
+    </table>
+
+{% endblock %}

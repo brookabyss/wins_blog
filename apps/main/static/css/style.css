@@ -17,19 +17,20 @@ body{
 }
 
 
-
-
 .nav_bar{
   width: 100%;
-  padding-left: 0;
+  /*padding-left: 0;
   margin-left: 0;
-  margin-top: 2%;
+  margin-top: 2%;*/
+  position: absolute;
+  top: 40%;
+  left: 10%;
   /*background: white;*/
 
 }
 
 .hub-circle{
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 8em;
   height: 8em;
   display: inline-block;
@@ -55,14 +56,19 @@ a{
 }
 
 .main-container{
-  width: 100%;
+  width: 90%;
   height: 100em;
   margin-top: 2em;
+  position: absolute;
+  top: 55%;
+  left: 5%;
 
 }
 
 .cont-1,.cont-2,.cont-3{
   height: 25em;
+  background: rgb(200, 200, 200, 0.5);
+  border: 1px solid orange;
 }
 
 .slogan-header{
@@ -88,20 +94,24 @@ a:link, a:visited {
 }
 .profile-div{
  height: 70%;
+
 }
 
 .profile-img{
-  height: 60%;
+  height: 150px;
+  width: 150px;
   margin: 1%;
   padding: 0;
 }
 
-.profile-story{
+.fun-fact{
   font-size: 14px;
   text-align: center;
 
 }
 
 #person_image{
-  height: 100%;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
 }

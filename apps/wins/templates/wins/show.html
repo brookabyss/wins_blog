@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hub</title>
-  </head>
-  <body>
-    <p>Wins</p>
+{% extends 'wins/base.html'%}
+{% block body %}
+    <h1>ACS Wins</h1>
+    <table class="table">
+      <thead>
+          <th scope="column">Title</th>
+          <th scope="column">Article</th>
+          <th scope="column">Published Date</th>
 
-  </body>
-</html>
+        </tr>
+      </thead>
+      <tbody>
+        {% for win in wins %}
+        <tr>
+          <td><a href="/wins/detail/{{win.id}}">{{win.title}}</a></td>
+          <td>{{win.description}}</td>
+          <td>{{win.created_at}}</td>
+        </tr>
+
+        {% endfor %}
+
+      </tbody>
+
+    </table>
+
+{% endblock%}
